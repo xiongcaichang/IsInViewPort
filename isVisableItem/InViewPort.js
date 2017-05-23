@@ -50,7 +50,7 @@ class InViewPort extends Component{
         })
       });
      
-      let isVisible = this.state.rectBottom > 0 && this.state.rectTop <= window.height
+      let isVisible = this.state.rectBottom > 0 || this.state.rectTop < window.height
 
       if (this.lastValue[this.props.visibleKey] !== isVisible) {
         this.lastValue[this.props.visibleKey] = isVisible;
